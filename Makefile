@@ -9,3 +9,10 @@ upgrade-deps:
 	go get -u ./...
 	go mod tidy
 	gotestsum ./...
+
+
+lint:
+	golangci-lint run
+
+test:
+	gotestsum ./...
