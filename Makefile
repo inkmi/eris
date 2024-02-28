@@ -1,4 +1,8 @@
-build:
+build: go-imports
+	@rm -rf bin/
+	go build -o bin/ ./...
+
+gh-build:
 	@rm -rf bin/
 	go build -o bin/ ./...
 
@@ -10,9 +14,11 @@ upgrade-deps:
 	go mod tidy
 	gotestsum ./...
 
-
 lint:
 	golangci-lint run
+
+gh-test:
+	go test ./...
 
 test:
 	gotestsum ./...
