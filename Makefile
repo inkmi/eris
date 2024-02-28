@@ -1,4 +1,4 @@
-build:  go-imports
+build:
 	@rm -rf bin/
 	go build -o bin/ ./...
 
